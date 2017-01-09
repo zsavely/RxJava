@@ -95,7 +95,7 @@ Flowable<String> source = Flowable.fromCallable(() -> {
     return "Done";
 });
 
-Flowabe<String> runBackground = source.subscribeOn(Schedulers.io());
+Flowable<String> runBackground = source.subscribeOn(Schedulers.io());
 
 Flowable<String> showForeground = runBackground.observeOn(Schedulers.single());
 
